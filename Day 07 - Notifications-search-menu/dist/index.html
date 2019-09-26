@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>100 Days CSS Challenge  - #007 Notifications, Search & Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="frame">
+    <div class="panel">
+      <div class="header">
+        <div class="menu-icon">
+          <div class="dash-top"></div>
+          <div class="dash-bottom"></div>
+          <div class="circle"></div>
+        </div>
+        <span class="title">Notifications</span>
+        <input type="text" class="search-input" placeholder="Search ...">
+        <div class="search-icon"><i class="fa fa-search"></i></div>
+      </div>
+
+      <div class="notifications ">
+        <div class="line"></div>
+        <div class="notification">
+          <div class="circle"></div>
+          <span class="time">9:24 AM</span>
+          <p><b>John Walker</b> posted a photo on your wall.</p>
+        </div>
+        <div class="notification">
+          <div class="circle"></div>
+          <span class="time">8:19 AM</span>
+          <p><b>Alice Parker</b> commented your last post.</p>
+        </div>
+        <div class="notification">
+          <div class="circle"></div>
+          <span class="time">Yesterday</span>
+          <p><b>Luke Wayne</b> added you as friend.</p>
+        </div>
+      </div>
+
+    </div> <!-- end .panel-->
+    <div class="menu">
+      <ul>
+        <li><span class="fas fa-clipboard"></span>Dashboard</li>
+        <li><span class="fas fa-user"></span>Profile</li>
+        <li><span class="fas fa-bell"></span>Notifications</li>
+        <li><span class="fas fa-comments"></span>Messages</li>
+        <li><span class="fas fa-cogs"></span>Settings</li>
+      </ul>
+    </div>
+
+  </div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
