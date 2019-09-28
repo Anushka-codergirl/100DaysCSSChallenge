@@ -1,0 +1,94 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.3);
+}
+
+.center {
+  position: absolute;
+	text-align: center;
+	overflow: hidden;
+	width: 400px;
+	height: 400px;
+	top: 0;
+	left: 0;
+}
+
+input[type="radio"] {
+	display:none;
+}
+
+.circle {
+	box-sizing: border-box;
+	position: absolute;
+	z-index: 5;
+	top: 175px;
+	left: 115px;
+	width: 50px;
+	height: 50px;
+	border: 2px solid #880E4F;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#c2 {
+	left: 175px;
+}
+
+#c3 {
+	left: 235px;
+}
+
+.active {
+	position: absolute;
+	z-index: 10;
+	width: 40px;
+	height: 40px;
+	background:#D81B60;
+	border-radius: 50%;
+	top: 180px;
+	left: 120px;
+	transition: all 1s ease;
+}
+
+#check-1:checked ~ .active {
+	transform: translateX(0px);
+}
+#check-2:checked ~ .active {
+	transform: translateX(60px);
+}
+#check-3:checked ~ .active {
+	transform: translateX(120px);
+}
+
+.bg {
+	position: absolute;
+	width: 400px;
+	height: 400px;
+	top: 0;
+	left: 0;
+	background: #5614B0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #DBD65C, #5614B0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #DBD65C, #5614B0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	border-left: 400px solid #9b59b6;
+	border-right: 400px solid #FFE082;
+	transition: all 1s ease;
+	transform: translateX(0px);
+}
+
+#check-1:checked ~ .bg {
+	transform: translateX(0px);
+}
+#check-2:checked ~ .bg {
+	transform: translateX(-400px);
+}
+#check-3:checked ~ .bg {
+	transform: translateX(-800px);
+}
