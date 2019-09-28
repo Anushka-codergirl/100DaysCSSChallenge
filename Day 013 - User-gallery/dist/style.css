@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Sofia',cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.imgsquare {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+
+.imgframe {
+  position: relative;
+  cursor: pointer;
+  flex-basis: 47.5%;
+  height: 190px;
+  background-size: cover;
+  background-position: center;
+}
+.imgframe--1 {
+  background-image: url("https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80");
+}
+.imgframe--2 {
+  background-image: url("https://images.unsplash.com/photo-1528837287481-470bb4a0e13a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+}
+.imgframe--3 {
+  background-image: url("https://images.unsplash.com/photo-1515343480029-43cdfe6b6aae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80");
+}
+.imgframe--4 {
+  background-image: url("https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80");
+}
+.imgframe--1, .imgframe--2 {
+  margin-top: 4px;
+}
+.imgframe--3, .imgframe--4 {
+  margin-bottom: 4px;
+}
+
+.imgframe .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+
+.imgframe .plus {
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #e02f49;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+
+.imgframe .plus:before {
+  position: absolute;
+  top: 34px;
+  left: 25px;
+  width: 20px;
+  height: 2px;
+  content: "";
+  background: #ffffff;
+}
+
+.imgframe .plus:after {
+  position: absolute;
+  left: 34px;
+  top: 25px;
+  width: 2px;
+  height: 20px;
+  content: "";
+  background: #ffffff;
+}
+
+.imgframe:hover .plus {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.imgframe:hover .overlay {
+  opacity: 1;
+}
+
+.details {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.details.active {
+  pointer-events: all;
+}
+.details.active .headerimg, .details.active .profileimg, .details.active .redbox, .details.active .close {
+  -webkit-transform: translate(0);
+          transform: translate(0);
+}
+
+.headerimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background-image: url("https://images.unsplash.com/photo-1534802046520-4f27db7f3ae5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2001&q=80");
+  background-size: cover;
+  -webkit-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+  transition: all 1s linear .5s;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e02f49;
+  -webkit-transform: translate(0, -200px);
+          transform: translate(0, -200px);
+  transition: all 2s ease-in-out;
+}
+.close:after {
+  position: absolute;
+  left: 24px;
+  top: 15px;
+  width: 2px;
+  height: 20px;
+  content: "";
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: all .4s ease-in-out;
+}
+.close:before {
+  position: absolute;
+  top: 24px;
+  left: 15px;
+  width: 20px;
+  height: 2px;
+  content: "";
+  background: #ffffff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: all .4s ease-in-out;
+}
+.close:hover {
+  background-color: white;
+}
+.close:hover:after, .close:hover:before {
+  background: #e02f49;
+}
+
+.redbox {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background-color: #e02f49;
+  -webkit-transform: translate(0, 250px);
+          transform: translate(0, 250px);
+  transition: all 1s linear .5s;
+}
+
+.profileimg {
+  position: absolute;
+  top: 130px;
+  left: 150px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.4);
+  background-image: url("https://grezo.files.wordpress.com/2015/01/apple-logo.png?w=960");
+  background-size: cover;
+  background-position: center;
+  -webkit-transform: translate(0, -550px);
+          transform: translate(0, -550px);
+  transition: all 2s ease-in-out;
+}
+
+.profilename {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.button {
+  position: absolute;
+  top: 55%;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: all .4s;
+  cursor: pointer;
+}
+.button--1 {
+  left: 90px;
+}
+.button--2 {
+  left: 175px;
+}
+.button--3 {
+  left: 260px;
+}
+.button:hover {
+  background-color: white;
+  box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.4);
+}
