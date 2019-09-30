@@ -1,0 +1,159 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to top right, #D2592A 0%, #FDB03A 100%);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#counter {
+  display: flex;
+  padding: 5px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+button {
+  display: block;
+  background: transparent;
+  border: none;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  transition: background 0.3s, color 0.3s, opacity 0.3s;
+}
+button:hover, button:focus {
+  opacity: 0.8;
+  outline: none;
+}
+button#minus:after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #E26E6E;
+}
+button#minus:hover, button#minus:focus {
+  background-color: #E26E6E;
+}
+button#minus:hover:after, button#minus:focus:after {
+  background-color: white;
+}
+button#plus:after, button#plus:before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #8ED173;
+}
+button#plus:after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+button#plus:before {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+button#plus:hover, button#plus:focus {
+  background-color: #8ED173;
+}
+button#plus:hover:after, button#plus:hover:before, button#plus:focus:after, button#plus:focus:before {
+  background-color: white;
+}
+
+#number {
+  position: relative;
+  margin: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6A85A0;
+}
+#number span {
+  opacity: 0;
+}
+
+#prevNumber {
+  position: absolute;
+  -webkit-animation: fade-out 0.5s 1 forwards;
+          animation: fade-out 0.5s 1 forwards;
+}
+
+#currNumber {
+  -webkit-animation: fade-in 0.5s 0.25s 1 forwards;
+          animation: fade-in 0.5s 0.25s 1 forwards;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
