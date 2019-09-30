@@ -1,0 +1,75 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	display: grid;
+	transition: all 2s;
+	grid-template-columns: repeat(3, 33%);
+	grid-template-rows: repeat(3, 33%);
+	// animation: load 1s forwards;
+	grid-gap: 4px;
+	grid-row-gap: 1px;
+	width: 100%;
+	height: 100%;
+
+	img { 
+		width: 135px;
+		height: 135px;
+		object-fit: cover;
+		transition: 1s;
+
+		cursor: pointer;
+	}
+	
+	$positions: left top, center top, right top, left center, center center, right center, left bottom,  center bottom, right bottom;
+	@each $position in $positions {
+			$i: index($positions,  $position);
+			div:nth-child(#{$i}) img { 
+					transform-origin: $position;
+					animation: load #{$i * .3}s 
+			}
+	}
+	[type=checkbox] {
+		display: none;
+		&:checked {
+			& ~ label img {
+				transform: scale(3.1) rotate(360deg)
+			}
+		}
+		
+	}
+}
+@keyframes load {
+	from {
+		transform: scale(1) rotate(0) translateX(-500px);
+			opacity: 0;
+	}
+	to {
+		transform: scale(1) rotate(0) translateX(0);
+			opacity: 1;
+	}
+}
