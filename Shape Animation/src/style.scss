@@ -1,0 +1,50 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #9b59b7;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.logo.white svg{
+	fill: #fff;
+}
+.logo.purple svg{
+	fill: #9B59B6;
+}
+.logo.small {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    transition: all .5s ease-in;
+}
+.logo {
+    position: absolute;
+    top: 160px;
+    left: 165px;
+}
+.logo.big {
+    -webkit-transform: scale(10);
+    transform: scale(10);
+    transition: all .5s ease-in;
+}
+.logo.normal {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition: all .5s ease-out .3s;
+}
+  
