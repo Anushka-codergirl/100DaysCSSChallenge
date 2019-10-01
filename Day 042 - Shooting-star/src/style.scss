@@ -1,0 +1,140 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+html { font-size : 62.5%; }
+body { font-size : 1.6rem; }
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sphere{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.sky {
+	position 			: relative;
+	border-radius : 50%;
+	width  : 30rem;
+	height : 30rem;	
+	margin : 10rem auto;
+	background: #614385;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #516395, #614385);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #516395, #614385); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+[class^="star"] {
+	position : absolute;
+	width    : 1px;
+	height   : 1px;
+	
+	background : white;
+	
+	// test
+	top  : 50%;
+	left : 50%;
+	
+	opacity : .8;
+	animation-name : flick;
+	animation-duration : .5s;
+	animation-iteration-count : infinite;
+}
+
+@keyframes flick {
+	60%   { opacity :  .8; }
+	100% { opacity : .5; }
+}
+
+@for $i from 1 through 300 {
+	.star-#{$i} {
+		top  : 10px + random( 290 );
+		left : 20px + random( 280 );
+		animation-duration : $i * .5s;
+		
+		@if $i % 2 == 0 {
+			opacity : .2 !important;
+		}
+	}
+}
+
+.shooting-star {
+	position : absolute;
+	top      : 70%;
+	left     : 50%;
+	
+	width  : 1rem;
+	height : 1rem;
+	
+	background : white;
+	border-radius : 50%;
+	box-shadow : 0 0 20px 0 white;
+	
+	transform : rotateZ( 35deg );
+	animation : star-shoot 2s ease infinite forwards;
+	
+	&::before {
+		content : "";
+		position : absolute;
+		width    : 30%;
+		height   : 70%;
+		
+		top  : 50%;
+		left : 50%;
+		
+		box-shadow : 0 0 20px 0 white;
+		background-color : white;
+		border-top-left-radius : 150%;
+		border-bottom-left-radius : 150%;
+		
+		transform : translateY( -50% ) translateX( 0% );
+		animation : star-shoot-trail 2s ease infinite;
+	}
+}
+
+@keyframes star-shoot {
+	0% {
+		top  : 0%;
+		left : 0%;
+	}
+	100% {
+		top  : 110%;
+		left : 150%;
+	}
+}
+
+@keyframes star-shoot-trail {
+	0% {
+		width : 0;
+		transform : translate( 0%, -50% );
+	}
+	5% {
+		width     : 100%;
+		transform : translate( -95%, -50% );}
+	60% {
+		width : 1000%;
+	}
+	100% {
+		width : 1000%;
+		transform : translate( -100%, -50% );
+	}
+}
