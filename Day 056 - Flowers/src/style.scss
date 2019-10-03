@@ -1,0 +1,442 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: .5rem 1rem 1rem rgba(0,0,0,0.6);
+	overflow: hidden;
+  background:#F1F8E9;
+
+}
+.flower {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 175px;
+  left: 175px;
+  transition: all .5s ease-in-out;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, .8);
+}
+.flower .leaf{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(140, 13, 224, .5);
+  border-radius: 2px 50px;
+  transition: all .5s ease-in-out;
+  box-shadow: 0 0 .5rem rgba(100, 58, 122, 1);
+}
+.flower .leaf:nth-child(2n+2) {
+  z-index: 2;
+	background: rgba(187, 37, 221, .4);
+}
+.dot {
+  position: absolute;
+  z-index: 8000;
+  width: 20px;
+  height: 20px;
+  top: 47.5%;
+  left: 47%;
+  background: #EA80FC;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: dot 10s ease-in-out infinite;
+	box-shadow: 0 0 .8rem rgba(0, 0, 0, .4);
+}
+
+.leaf-0 {
+          transform: rotate(0deg) translateY(0);
+          animation: leaf-0 10s ease infinite;
+}
+
+.flower{
+          animation: flower 10s ease infinite;
+}
+
+@keyframes leaf-0 {
+  0%,100% {
+            transform: rotate(0deg) translateY(0);
+  }
+  10% {
+            transform: rotate(0deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(0deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(0deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-1 {
+          transform: rotate(22.5deg) translateY(0);
+          animation: leaf-1 10s ease infinite;
+}
+
+@keyframes leaf-1 {
+  0%,100% {
+            transform: rotate(22.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(22.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(22.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(22.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-2 {
+          transform: rotate(45deg) translateY(0);
+          animation: leaf-2 10s ease infinite;
+}
+
+@keyframes leaf-2 {
+  0%,100% {
+            transform: rotate(45deg) translateY(0);
+  }
+  10% {
+            transform: rotate(45deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(45deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(45deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-3 {
+          transform: rotate(67.5deg) translateY(0);
+          animation: leaf-3 10s ease infinite;
+}
+@keyframes leaf-3 {
+  0%,100% {
+            transform: rotate(67.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(67.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(67.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(67.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-4 {
+          transform: rotate(90deg) translateY(0);
+          animation: leaf-4 10s ease infinite;
+}
+
+@keyframes leaf-4 {
+  0%,100% {
+            transform: rotate(90deg) translateY(0);
+  }
+  10% {
+            transform: rotate(90deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(90deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(90deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-5 {
+          transform: rotate(112.5deg) translateY(0);
+          animation: leaf-5 10s ease infinite;
+}
+
+@keyframes leaf-5 {
+  0%,100% {
+            transform: rotate(112.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(112.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(112.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(112.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-6 {
+          transform: rotate(135deg) translateY(0);
+          animation: leaf-6 10s ease infinite;
+}
+
+@keyframes leaf-6 {
+  0%,100% {
+            transform: rotate(135deg) translateY(0);
+  }
+  10% {
+            transform: rotate(135deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(135deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(135deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-7 {
+          transform: rotate(157.5deg) translateY(0);
+          animation: leaf-7 10s ease infinite;
+}
+
+@keyframes leaf-7 {
+  0%,100% {
+            transform: rotate(157.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(157.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(157.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(157.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-8 {
+          transform: rotate(180deg) translateY(0);
+          animation: leaf-8 10s ease infinite;
+}
+
+@keyframes leaf-8 {
+  0%,100% {
+            transform: rotate(180deg) translateY(0);
+  }
+  10% {
+            transform: rotate(180deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(180deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(180deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-9 {
+          transform: rotate(202.5deg) translateY(0);
+          animation: leaf-9 10s ease infinite;
+}
+
+@keyframes leaf-9 {
+  0%,100% {
+            transform: rotate(202.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(202.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(202.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(202.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-10 {
+          transform: rotate(225deg) translateY(0);
+          animation: leaf-10 10s ease infinite;
+}
+
+@keyframes leaf-10 {
+  0%,100% {
+            transform: rotate(225deg) translateY(0);
+  }
+  10% {
+            transform: rotate(225deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(225deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(225deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-11 {
+          transform: rotate(247.5deg) translateY(0);
+          animation: leaf-11 10s ease infinite;
+}
+
+@keyframes leaf-11 {
+  0%,100% {
+            transform: rotate(247.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(247.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(247.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(247.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-12 {
+          transform: rotate(270deg) translateY(0);
+          animation: leaf-12 10s ease infinite;
+}
+
+@keyframes leaf-12 {
+  0%,100% {
+            transform: rotate(270deg) translateY(0);
+  }
+  10% {
+            transform: rotate(270deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(270deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(270deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-13 {
+          transform: rotate(292.5deg) translateY(0);
+          animation: leaf-13 10s ease infinite;
+}
+
+@keyframes leaf-13 {
+  0%,100% {
+            transform: rotate(292.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(292.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(292.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(292.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-14 {
+          transform: rotate(315deg) translateY(0);
+          animation: leaf-14 10s ease infinite;
+}
+
+@keyframes leaf-14 {
+  0%,100% {
+            transform: rotate(315deg) translateY(0);
+  }
+  10% {
+            transform: rotate(315deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(315deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(315deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+.leaf-15 {
+          transform: rotate(337.5deg) translateY(0);
+          animation: leaf-15 10s ease infinite;
+}
+
+@keyframes leaf-15 {
+  0%,100% {
+            transform: rotate(337.5deg) translateY(0);
+  }
+  10% {
+            transform: rotate(337.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  60% {
+            transform: rotate(337.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+  65% {
+            transform: rotate(337.5deg) translate(-35px, -35px) scale(2);
+    box-shadow: -5px -5px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+}
+@keyframes flower {
+  0% {
+            transform: rotate(0);
+  }
+  60% {
+            transform: rotate(180deg);
+  }
+  100% {
+            transform: rotate(360deg);
+  }
+}
+@keyframes dot {
+  0% {
+            transform: scale(0);
+  }
+  10% {
+            transform: scale(1.1);
+  }
+  25% {
+            transform: scale(0.95);
+  }
+  30%, 55% {
+            transform: scale(1);
+  }
+  57.9% {
+            transform: scale(1.1);
+  }
+  70% {
+            transform: scale(0);
+  }
+}
+.flower2, .flower3, .flower4 {
+	opacity: 0;
+	transform: scale(0);
+	position: absolute;
+}
