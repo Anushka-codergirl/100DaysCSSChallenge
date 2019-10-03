@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+.wrap {
+	width: 100vw;
+	height: 100vh;
+	background:#F8BBD0 ;
+	transition: 1s;
+}
+.background {
+	background: url('https://images.unsplash.com/photo-1528459709161-157d86910939?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=808&q=80');
+	background-size: cover;
+}
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: .5rem 1rem 1rem rgba(0,0,0,0.6);
+	overflow: hidden;
+  background: #201c29;
+  color: #333;
+	font-family: Cookie;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+form {
+	width: 70%;
+}
+
+.form-control {
+	padding: 1.5rem .8rem !important;
+	background: none !important;
+	border-radius: 0 !important;
+	color: fade-out(white, .4) !important;
+	font-size: 1.5rem !important;
+	border: {
+		bottom: 5px solid #643a7a !important;
+		top: transparent !important;
+		left: transparent !important;
+		right: transparent !important;
+	}
+	&:focus {
+		box-shadow: none !important;
+	}
+	&::placeholder {
+		color: fade-out(white, .6) !important;
+		font-size: 1.2rem !important;
+	}
+}
+#methods {
+	position: absolute;
+	top: 15%;
+	left: 89%;
+	z-index: 10;
+	opacity: 0;
+	&:hover {
+		cursor: pointer;
+	}
+	&:checked ~ .fa-eye-slash {
+		opacity: .5;
+	}
+	&:checked ~ .fa-eye {
+		opacity: 0;
+	}
+}
+i {
+	position: absolute;
+	top: 15%;
+	left: 88%;
+	font-size: 1.5rem;
+	color: white !important;
+	opacity: .5;
+}
+
+.fa-eye-slash {
+	opacity: 0;
+}
+
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 100%;
+  bottom: 1.42rem;
+  background:#EC407A ;
+  height: 5px;
+  transition-property: right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+form:focus-within .form-control {
+	border-bottom: 5px solid #bb25dd !important;
+}
