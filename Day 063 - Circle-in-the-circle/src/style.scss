@@ -1,0 +1,47 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background:#000;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	border: 2px dotted #FF4081;
+	position: absolute;
+	top: 50px;
+	left: 100px;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+@keyframes hole {
+		from {
+			transform: scale(0) translate(-125px, -150px);
+			opacity: 0.5;
+		}
+		
+		to {
+			transform: scale(3.7) translate(0px, 0px);
+			opacity: 1;
+		}
+}
+
+@for $i from 1 through 40 {
+	.circle#{$i} {
+		will-change: transform;
+		animation: hole 10s ease-in-out ((-10 / 50) * $i)+s infinite;
+	}
+	
+}

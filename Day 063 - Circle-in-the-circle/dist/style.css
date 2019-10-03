@@ -1,0 +1,291 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border: 2px dotted #FF4081;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+@-webkit-keyframes hole {
+  from {
+    -webkit-transform: scale(0) translate(-125px, -150px);
+            transform: scale(0) translate(-125px, -150px);
+    opacity: 0.5;
+  }
+  to {
+    -webkit-transform: scale(3.7) translate(0px, 0px);
+            transform: scale(3.7) translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes hole {
+  from {
+    -webkit-transform: scale(0) translate(-125px, -150px);
+            transform: scale(0) translate(-125px, -150px);
+    opacity: 0.5;
+  }
+  to {
+    -webkit-transform: scale(3.7) translate(0px, 0px);
+            transform: scale(3.7) translate(0px, 0px);
+    opacity: 1;
+  }
+}
+.circle1 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -0.2s infinite;
+          animation: hole 10s ease-in-out -0.2s infinite;
+}
+
+.circle2 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -0.4s infinite;
+          animation: hole 10s ease-in-out -0.4s infinite;
+}
+
+.circle3 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -0.6s infinite;
+          animation: hole 10s ease-in-out -0.6s infinite;
+}
+
+.circle4 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -0.8s infinite;
+          animation: hole 10s ease-in-out -0.8s infinite;
+}
+
+.circle5 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -1s infinite;
+          animation: hole 10s ease-in-out -1s infinite;
+}
+
+.circle6 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -1.2s infinite;
+          animation: hole 10s ease-in-out -1.2s infinite;
+}
+
+.circle7 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -1.4s infinite;
+          animation: hole 10s ease-in-out -1.4s infinite;
+}
+
+.circle8 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -1.6s infinite;
+          animation: hole 10s ease-in-out -1.6s infinite;
+}
+
+.circle9 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -1.8s infinite;
+          animation: hole 10s ease-in-out -1.8s infinite;
+}
+
+.circle10 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -2s infinite;
+          animation: hole 10s ease-in-out -2s infinite;
+}
+
+.circle11 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -2.2s infinite;
+          animation: hole 10s ease-in-out -2.2s infinite;
+}
+
+.circle12 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -2.4s infinite;
+          animation: hole 10s ease-in-out -2.4s infinite;
+}
+
+.circle13 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -2.6s infinite;
+          animation: hole 10s ease-in-out -2.6s infinite;
+}
+
+.circle14 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -2.8s infinite;
+          animation: hole 10s ease-in-out -2.8s infinite;
+}
+
+.circle15 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -3s infinite;
+          animation: hole 10s ease-in-out -3s infinite;
+}
+
+.circle16 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -3.2s infinite;
+          animation: hole 10s ease-in-out -3.2s infinite;
+}
+
+.circle17 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -3.4s infinite;
+          animation: hole 10s ease-in-out -3.4s infinite;
+}
+
+.circle18 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -3.6s infinite;
+          animation: hole 10s ease-in-out -3.6s infinite;
+}
+
+.circle19 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -3.8s infinite;
+          animation: hole 10s ease-in-out -3.8s infinite;
+}
+
+.circle20 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -4s infinite;
+          animation: hole 10s ease-in-out -4s infinite;
+}
+
+.circle21 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -4.2s infinite;
+          animation: hole 10s ease-in-out -4.2s infinite;
+}
+
+.circle22 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -4.4s infinite;
+          animation: hole 10s ease-in-out -4.4s infinite;
+}
+
+.circle23 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -4.6s infinite;
+          animation: hole 10s ease-in-out -4.6s infinite;
+}
+
+.circle24 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -4.8s infinite;
+          animation: hole 10s ease-in-out -4.8s infinite;
+}
+
+.circle25 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -5s infinite;
+          animation: hole 10s ease-in-out -5s infinite;
+}
+
+.circle26 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -5.2s infinite;
+          animation: hole 10s ease-in-out -5.2s infinite;
+}
+
+.circle27 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -5.4s infinite;
+          animation: hole 10s ease-in-out -5.4s infinite;
+}
+
+.circle28 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -5.6s infinite;
+          animation: hole 10s ease-in-out -5.6s infinite;
+}
+
+.circle29 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -5.8s infinite;
+          animation: hole 10s ease-in-out -5.8s infinite;
+}
+
+.circle30 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -6s infinite;
+          animation: hole 10s ease-in-out -6s infinite;
+}
+
+.circle31 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -6.2s infinite;
+          animation: hole 10s ease-in-out -6.2s infinite;
+}
+
+.circle32 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -6.4s infinite;
+          animation: hole 10s ease-in-out -6.4s infinite;
+}
+
+.circle33 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -6.6s infinite;
+          animation: hole 10s ease-in-out -6.6s infinite;
+}
+
+.circle34 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -6.8s infinite;
+          animation: hole 10s ease-in-out -6.8s infinite;
+}
+
+.circle35 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -7s infinite;
+          animation: hole 10s ease-in-out -7s infinite;
+}
+
+.circle36 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -7.2s infinite;
+          animation: hole 10s ease-in-out -7.2s infinite;
+}
+
+.circle37 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -7.4s infinite;
+          animation: hole 10s ease-in-out -7.4s infinite;
+}
+
+.circle38 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -7.6s infinite;
+          animation: hole 10s ease-in-out -7.6s infinite;
+}
+
+.circle39 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -7.8s infinite;
+          animation: hole 10s ease-in-out -7.8s infinite;
+}
+
+.circle40 {
+  will-change: transform;
+  -webkit-animation: hole 10s ease-in-out -8s infinite;
+          animation: hole 10s ease-in-out -8s infinite;
+}
