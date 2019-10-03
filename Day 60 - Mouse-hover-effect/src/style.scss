@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+.frame{
+  width: 400px;
+  height: 400px;
+  margin: calc((100vh - 400px)/2) auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+	box-shadow: .5rem 1rem 1rem rgba(0, 0, 0, .6);
+	background: #E6E6E6;
+}
+.text-front, .text-back {
+  position: absolute;
+  width: 100%;
+  font-size: 5rem;
+  color: #000;
+	font-family: 'Cookie', cursive;
+	line-height: 5rem;
+}
+.text-front {
+  height: 100%;
+	color: #201c29;
+	width: 25%;
+	position: absolute;
+	top: -3rem;
+	left: 28%;
+	.text {
+		color: #201c29;
+	}
+}
+.text-back {
+  background-color: fade-out(#f00, .8);
+  height: 5%;
+  overflow: hidden;
+	width: 100%;
+}
+.apostrophe {
+	position: absolute;
+	top: -3rem;
+	left: -5.5rem;
+	font-size: 10rem;
+}
+.suite {
+	position: absolute;
+	bottom: 1rem;
+	left: 12%;
+}
+.author {
+	font-size: 1.2rem;
+	position: absolute;
+	font-family: Cookie;
+	bottom: 1rem;
+	right: 5rem;
+}
