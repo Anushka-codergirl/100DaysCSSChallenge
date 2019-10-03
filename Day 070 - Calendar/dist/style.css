@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Cookie");
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: Cookie;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.calendar {
+  display: grid;
+  grid-template: 50% 50% / 50% 50%;
+}
+
+.cell {
+  box-sizing: border-box;
+  background: #5C6BC0;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  border: 2px solid;
+}
+.cell .date {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.cell .date span {
+  display: block;
+  font-size: 100px;
+  font-weight: bold;
+}
+.cell .event {
+  line-height: 70px;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.cell:hover {
+  background: #25ce9e;
+  border: 5px solid #000;
+  box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+.cell:hover .date {
+  -webkit-transform: translate(0, calc(-50% - 30px)) scale(0.9);
+          transform: translate(0, calc(-50% - 30px)) scale(0.9);
+}
+.cell:hover .event {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+p {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: all .2s ease-in-out;
+}
