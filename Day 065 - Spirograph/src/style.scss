@@ -1,0 +1,45 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #ABCDEF;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.ellipse{
+	position:absolute;
+	width:140px;
+	height:250px;
+	border: 1px solid #FFF;
+	top:80px;
+	left:135px;
+	transition: all .5s ease-in-out;
+}
+
+@for $i from 1 to 26{
+	.e-#{$i}{
+		animation: trans-#{$i} 7s infinite;
+	}
+	@keyframes trans-#{$i}{
+		0%{
+			transform: rotate($i*10deg - 10deg);
+			border-radius:50%;
+		}
+		50%{
+			transform: rotate(0) scaleX(2.2);
+			border-radius:0%;
+		}
+		100%{
+			transform: rotate(360deg - $i*10deg+10deg);
+			border-radius:50%;
+		}
+	}
+}
