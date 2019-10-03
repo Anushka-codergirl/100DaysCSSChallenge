@@ -1,0 +1,72 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+background: #780206;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.ring{
+	top:-40px;
+	left:-40px;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+}
+.dot{
+	size: 50%;
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	width: 8px;
+	height: 8px;
+}
+
+.ring .dot .fill{
+	width: 8px;
+	height: 8px;
+	border-radius: 50px;
+	background: #fff;
+}
+
+@for $i from 1 through 10{
+	.ring-#{$i} .dot .fill{
+		animation: play 3s ease-in-out 1s*$i alternate infinite both;
+	}
+}
+
+@for $j from 1 through 10{
+	@for $i from 1 through (12+6*$j){
+		.ring-#{$j} .dot-#{$i}{
+			transform: translate3d(0, -(29px+11*$j), 0) rotate(0deg+(360/(12+6*$j))*$i);
+			transform-origin: 0 (29px+11*$j);
+		}	
+	}
+}
+
+@keyframes play{
+	from{
+		transform: scale(0);
+	}
+	to{
+		transform: scale(1);
+	}
+}
