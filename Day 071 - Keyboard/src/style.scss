@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+	display: flex;
+  flex-direction: column;
+	perspective: 250px;
+	font-family: Pacifico;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.screen {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	color: black;
+	border: 15px solid;
+	border-radius: 10px;
+	transform: skewX(0deg);
+	transform-origin: center bottom;
+	font-size: 5em;
+}
+.keyboard {
+	--size: 34px;
+	display: grid;
+	grid-template-columns: repeat(10, var(--size));
+	grid-template-rows: repeat(4, var(--size));
+	grid-gap: 5px;
+	text-align: center;
+	line-height: var(--size);
+	background: silver;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	transform: rotateX(9deg);
+	transform-origin: center top;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .5);
+	font-size: 0.875em;
+}
+.keyboard > span {
+	--bg:#FF7043 ;
+	cursor: pointer;
+	border-radius: 3px;
+	background-color: var(--bg);
+}
+.keyboard > span:hover {
+	background-color: var(--bg);
+}
+.keyboard > span:nth-child(27){
+	--bg: transparent;
+	grid-column: span 4;
+	cursor: pointer;
+}
