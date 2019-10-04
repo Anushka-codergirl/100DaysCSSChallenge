@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Germania+One|Satisfy");
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #5E35B1;
+  color: #E91E63;
+  font-weight: bold;
+  font-family: 'Satisfy', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 40px;
+  background: white;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  line-height: 50px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  box-shadow: 0 0 10px 0 #E91E63 ,  inset 0 0 5px 0 #E91E63;
+}
+
+.btn:not(:last-child) {
+  margin-bottom: 25px;
+}
