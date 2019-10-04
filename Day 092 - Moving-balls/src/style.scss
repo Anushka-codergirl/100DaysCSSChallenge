@@ -1,0 +1,188 @@
+$size: 20;
+$max: 200 - ($size / 2);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.25);
+    overflow: hidden;
+  background: #0cebeb;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.ball {
+  position: absolute;
+    top: ($max)+px;
+    left: ($max)+px;
+    width: ($size)+px;
+    height: ($size)+px;
+    border-radius: 50%;
+    background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+@for $i from 1 through 8 {
+    .ball-#{$i} {
+        animation: ball-#{$i} 6s linear infinite;
+    }
+}
+
+@for $i from 9 through 16 {
+    .ball-#{$i} {
+        animation: ball-#{$i} 3.5s linear infinite;
+    }
+}
+
+@keyframes ball-1 {
+    0%, 100% {
+        transform: translate(-195px,-195px);
+    }
+    50% {
+        transform: translate(0,195px);
+    }
+}
+
+@keyframes ball-2 {
+    0%, 100% {
+        transform: translate(195px,-195px);
+    }
+    50% {
+        transform: translate(0,195px);
+    }
+}
+
+@keyframes ball-3 {
+    0%, 100% {
+        transform: translate(195px,195px);
+    }
+    50% {
+        transform: translate(0,-195px);
+    }
+}
+
+@keyframes ball-4 {
+    0%, 100% {
+        transform: translate(-195px,195px);
+    }
+    50% {
+        transform: translate(0,-195px);
+    }
+}
+
+@keyframes ball-5 {
+    0%, 100% {
+        transform: translate(-195px,-195px);
+    }
+    50% {
+        transform: translate(195px,0);
+    }
+}
+
+@keyframes ball-6 {
+    0%, 100% {
+        transform: translate(195px,-195px);
+    }
+    50% {
+        transform: translate(-195px,0);
+    }
+}
+
+@keyframes ball-7 {
+    0%, 100% {
+        transform: translate(195px,195px);
+    }
+    50% {
+        transform: translate(-195px,0);
+    }
+}
+
+@keyframes ball-8 {
+    0%, 100% {
+        transform: translate(-195px,195px);
+    }
+    50% {
+        transform: translate(195px,0);
+    }
+}
+
+@keyframes ball-9 {
+    0%, 100% {
+        transform: translate(0,-195px);
+    }
+    50% {
+        transform: translate(195px,0);
+    }
+}
+
+@keyframes ball-10 {
+    0%, 100% {
+        transform: translate(0,195px);
+    }
+    50% {
+        transform: translate(195px,0);
+    }
+}
+
+@keyframes ball-11 {
+    0%, 100% {
+        transform: translate(0,-195px);
+    }
+    50% {
+        transform: translate(-195px,0);
+    }
+}
+
+@keyframes ball-12 {
+    0%, 100% {
+        transform: translate(0,195px);
+    }
+    50% {
+        transform: translate(-195px,0);
+    }
+}
+
+@keyframes ball-13 {
+    0%, 100% {
+        transform: translate(195px,0);
+    }
+    50% {
+        transform: translate(0,195px);
+    }
+}
+
+@keyframes ball-14 {
+    0%, 100% {
+        transform: translate(-195px,0);
+    }
+    50% {
+        transform: translate(0,195px);
+    }
+}
+
+@keyframes ball-15 {
+    0%, 100% {
+        transform: translate(195px,0);
+    }
+    50% {
+        transform: translate(0,-195px);
+    }
+}
+
+@keyframes ball-16 {
+    0%, 100% {
+        transform: translate(-195px,0);
+    }
+    50% {
+        transform: translate(0,-195px);
+    }
+}

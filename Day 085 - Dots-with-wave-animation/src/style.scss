@@ -1,0 +1,63 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+	background: linear-gradient(119deg,#EC407A 0,#406bd8 90%);
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+$numberOfDots: 36;
+.dots{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	.dot {
+		width  : 6px;
+		height : 6px;
+		border-radius: 50%;
+		background: #eee;
+	}
+}
+@for $i from 1 through ceil($numberOfDots) {
+	.dot-#{$i}{
+		animation: wave-#{$i} 3s infinite;
+	}
+}
+@for $i from 1 through $numberOfDots {
+	@keyframes wave-#{$i} {
+		@if $i > ceil($numberOfDots/2){
+			0%{
+				transform: translateY(3px *($numberOfDots - $i) * ($numberOfDots - $i) / 9) scale(.09 * ($numberOfDots - $i));
+			}
+			50%{
+				transform: translateY(3px *($numberOfDots - $i) * ($numberOfDots - $i) / -9) scale(.09 * ($numberOfDots - $i));
+			}
+			100%{
+				transform: translateY(3px *($numberOfDots - $i) * ($numberOfDots - $i) / 9) scale(.09 * ($numberOfDots - $i));
+			}
+		}
+		@if $i <= ceil($numberOfDots/2){
+			0%{
+				transform: translateY(3px *($i) * ( $i) / 9) scale(.09 * $i);
+			}
+			50%{
+				transform: translateY(3px *( $i) * ( $i) / -9) scale(.09 * $i);
+			}
+			100%{
+				transform: translateY(3px *( $i) * ( $i) / 9) scale(.09 * $i);
+			}
+		}
+	}
+}

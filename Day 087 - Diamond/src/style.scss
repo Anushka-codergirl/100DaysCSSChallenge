@@ -1,0 +1,121 @@
+$blue: #303F9F;
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #333333;  /* fallback for old browsers */
+background: #556270;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF6B6B, #556270);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF6B6B, #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.ruby {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@mixin diamond {
+	position: absolute;
+	height: 0;
+	width: 0;
+	border-style: solid;
+}
+
+.bottom-left {
+	@include diamond;
+	top: 50%;
+	right: 50%;
+	border-width: 100px 0px 0px 100px;
+	border-color: darken($blue, 10
+		) transparent transparent transparent;
+}
+
+.bottom-right {
+	@include diamond;
+	top: 50%;
+	left: 50%;
+	border-width: 100px 100px 0px 0px;
+	border-color: lighten($blue, 10
+		) transparent transparent transparent;
+}
+
+.bottom-center {
+	@include diamond;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50px, 0);
+	border-width: 100px 50px 0px 50px;
+	border-color: $blue transparent transparent transparent;
+}
+
+.top-left-left {
+	@include diamond;
+	bottom: 50%;
+	right: calc(50% + 50px);
+	border-width: 0px 10px 40px 40px;
+	border-color:  transparent transparent $blue transparent;
+}
+
+.top-right-right {
+	@include diamond;
+	bottom: 50%;
+	left: calc(50% + 50px);
+	border-width: 0px 40px 40px 10px;
+	border-color:  transparent transparent $blue transparent;
+}
+
+.top-left {
+	position: absolute;
+	width: 60px;
+	height: 40px;
+	bottom: 50%;
+	right: 50%;
+	background-color: lighten($blue, 10);
+}
+
+.top-right {
+	position: absolute;
+	width: 60px;
+	height: 40px;
+	bottom: 50%;
+	left: 50%;
+	overflow: hidden;
+	background-color: lighten($blue, 30);
+}
+.top-center{
+	@include diamond;
+	bottom: 50%;
+	left: 50%;
+	transform:	translate(-50%);
+	border-width: 0px 50px 40px 50px;
+	border-color:  transparent transparent lighten($blue, 5) transparent;
+}
+
+.flash {
+	position: absolute;
+	width: 80px;
+	height: 5px;
+	bottom: 50%;
+	left: 0;
+	background-color: lighten($blue, 50);
+	transform: rotate(42deg) translateY(-40px);
+	animation: flashy 5s ease-in infinite;
+}
+
+@keyframes flashy {
+	0%{
+		transform: rotate(42deg) translateY(11px);
+	}
+	5%{
+		transform: rotate(42deg) translateY(-40px)
+	}
+}
