@@ -1,0 +1,492 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background:#212121;
+}
+.lines {
+    position: absolute;
+    top: 90px;
+    left: 100px;
+    width: 3px;
+    height: 25px;
+    background: linear-gradient(to bottom,#ECEFF1  0%,#90A4AE 29%, #FF1361 67%, #FFCC80 100%);
+}
+
+.l1 {
+    transform: rotate(0deg) translateY(72.8px);
+}
+.l2 {
+    transform: rotate(30deg) translateY(67.7px);
+}
+.l3 {
+    transform: rotate(60deg) translateY(80.7px);
+}
+.l4 {
+    transform: rotate(90deg) translateY(76.7px);
+}
+.l5 {
+    transform: rotate(120deg) translateY(67.7px);
+}
+.l6 {
+    transform: rotate(150deg) translateY(80.7px);
+}
+.l7 {
+    transform: rotate(180deg) translateY(72.7px);
+}
+.l8 {
+    transform: rotate(210deg) translateY(79.1px);
+}
+.l9 {
+    transform: rotate(240deg) translateY(81.7px);
+}
+.l10 {
+    transform: rotate(270deg) translateY(70.6px);
+}
+.l11 {
+    transform: rotate(300deg) translateY(81.7px);
+}
+.l12 {
+    transform: rotate(330deg) translateY(79px);
+}
+.l13 {
+    transform: rotate(360deg) translateY(40px);
+}
+.l14 {
+    transform: rotate(330deg) translateY(79px);
+}
+
+.circle {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+}
+.c1 {
+    opacity: 0;
+    animation: wrap-1 3s cubic-bezier(.97, .03, .97, .35) 0s infinite;
+}
+
+.c2 {
+    opacity: 0;
+    animation: wrap-2 3s cubic-bezier(.97, .03, .97, .35) 0.15s infinite;
+}
+
+.c3 {
+    opacity: 0;
+    animation: wrap-3 3s cubic-bezier(.97, .03, .97, .35) 0.30s infinite;
+}
+
+.c4 {
+    opacity: 0;
+    animation: wrap-4 3s cubic-bezier(.97, .03, .97, .35) 0.45s infinite;
+}
+
+.c5 {
+    opacity: 0;
+    animation: wrap-5 3s cubic-bezier(.97, .03, .97, .35) 0.60s infinite;
+}
+
+.c6 {
+    opacity: 0;
+    animation: wrap-6 3s cubic-bezier(.97, .03, .97, .35) 0.75s infinite;
+}
+
+.c7 {
+    opacity: 0;
+    animation: wrap-7 3s cubic-bezier(.97, .03, .97, .35) 0.90s infinite;
+}
+
+.c8 {
+    opacity: 0;
+    animation: wrap-8 3s cubic-bezier(.97, .03, .97, .35) 1.05s infinite;
+}
+
+.c9 {
+    opacity: 0;
+    animation: wrap-9 3s cubic-bezier(.97, .03, .97, .35) 1.20s infinite;
+}
+
+.c10 {
+    opacity: 0;
+    animation: wrap-10 3s cubic-bezier(.97, .03, .97, .35) 1.35s infinite;
+}
+
+.c11 {
+    opacity: 0;
+    animation: wrap-11 3s cubic-bezier(.97, .03, .97, .35) 1.50s infinite;
+}
+
+.c12 {
+    opacity: 0;
+    animation: wrap-12 3s cubic-bezier(.97, .03, .97, .35) 1.65s infinite;
+}
+
+.c13 {
+    opacity: 0;
+    animation: wrap-13 3s cubic-bezier(.97, .03, .97, .35) 1.80s infinite;
+}
+
+.c14 {
+    opacity: 0;
+    animation: wrap-14 3s cubic-bezier(.97, .03, .97, .35) 1.95s infinite;
+}
+
+.c15 {
+    opacity: 0;
+    animation: wrap-15 3s cubic-bezier(.97, .03, .97, .35) 2.1s infinite;
+}
+
+.c16 {
+    opacity: 0;
+    animation: wrap-16 3s cubic-bezier(.97, .03, .97, .35) 2.25s infinite;
+}
+
+.c17 {
+    opacity: 0;
+    animation: wrap-17 3s cubic-bezier(.97, .03, .97, .35) 2.40s infinite;
+}
+
+.c18 {
+    opacity: 0;
+    animation: wrap-18 3s cubic-bezier(.97, .03, .97, .35) 2.55s infinite;
+}
+
+.c19 {
+    opacity: 0;
+    animation: wrap-19 3s cubic-bezier(.97, .03, .97, .35) 2.70s infinite;
+}
+
+.c20 {
+    opacity: 0;
+    animation: wrap-20 3s cubic-bezier(.97, .03, .97, .35) 2.85s infinite;
+}
+
+@keyframes wrap-1 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 10deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4)  rotate3d(1, 1, 2, 10deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-2 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 45deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-3 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 25deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 25deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-4 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 55deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 55deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-5 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 70deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 70deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-6 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 0deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-7 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 82deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 80deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-8 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 47deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 47deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-9 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 122deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 122deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-10 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 32deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 32deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-11 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 66deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 66deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-12 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 17deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 17deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-13 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 100deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 100deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-14 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 51deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 51deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-15 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 77deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 77deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-16 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 26deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 26deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-17 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 95deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 95deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-18 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 33deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 33deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-19 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 1deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 1deg);
+        opacity: 1;
+    }
+}
+
+@keyframes wrap-20 {
+    0% {
+        transform: scale(0.05) rotate3d(1, 1, 2, 54deg);
+        opacity: 0.1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(4) rotate3d(1, 1, 2, 54deg);
+        opacity: 1;
+    }
+}
