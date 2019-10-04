@@ -1,0 +1,73 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: Pacifico;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+div{
+	margin:0;
+	padding:0;
+}
+.box{
+	display: flex;
+}
+
+.block{
+	width:25%;
+	height:400px;
+	transition:  all 0.3s ease-in-out;
+	box-shadow: -1px 0 3px rgba(0,0,0,0.2);
+	overflow:hidden;
+}
+
+.content{
+	display:inline-block;
+	width:100%;
+	text-align:center;
+	color:#fff;
+	line-height:400px;
+	overflow:hidden;
+	font-weight:bold;
+	transform:scale(0);
+	transition:all 0.3s ease-in-out;
+}
+
+.b-1{
+	background:#D1C4E9;
+}
+.b-2{
+	background:#F8BBD0;
+}
+.b-3{
+	background:#C8E6C9;
+}
+.b-4{
+	background:#FFF9C4;
+}
+
+.block:hover{
+	width:250px;
+	.content{
+		font-size:24px;
+		transform:scale(1);
+	}
+}
+
+

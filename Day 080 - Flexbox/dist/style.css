@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: Pacifico;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  display: flex;
+}
+
+.block {
+  width: 25%;
+  height: 400px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: -1px 0 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.content {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 400px;
+  overflow: hidden;
+  font-weight: bold;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.b-1 {
+  background: #D1C4E9;
+}
+
+.b-2 {
+  background: #F8BBD0;
+}
+
+.b-3 {
+  background: #C8E6C9;
+}
+
+.b-4 {
+  background: #FFF9C4;
+}
+
+.block:hover {
+  width: 250px;
+}
+.block:hover .content {
+  font-size: 24px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
